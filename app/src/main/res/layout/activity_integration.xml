@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IntegrationActivity">
+
+
+    <LinearLayout
+        android:id="@+id/empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="86dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            android:layout_marginTop="32dp"
+            app:lottie_rawRes="@raw/socialmediaicons"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Connect A Social Network To Get Started"
+            android:textSize="28sp"
+            android:fontFamily="sans-serif-medium"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/contributions"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="86dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome Back"
+            android:textSize="34sp"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginTop="8dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Here is How Much Support You've Received"
+            android:textSize="20sp"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginTop="8dp"/>
+
+
+        <TextView
+            android:id="@+id/totalContribution"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$0.00"
+            android:textSize="96sp"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginTop="12dp"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="86dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical"
+        android:layout_gravity="bottom">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Socials"
+            android:textSize="16sp"
+            android:layout_marginStart="16dp"/>
+
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/contentRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </androidx.recyclerview.widget.RecyclerView>
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="260dp"
+                android:orientation="horizontal">
+                <io.github.florent37.shapeofview.shapes.RoundRectView
+                    android:layout_width="148dp"
+                    android:layout_height="240dp"
+                    app:shape_roundRect_bottomLeftRadius="16dp"
+                    app:shape_roundRect_bottomRightRadius="16dp"
+                    app:shape_roundRect_topLeftRadius="16dp"
+                    app:shape_roundRect_topRightRadius="16dp"
+
+                    app:shape_roundRect_borderWidth="0dp"
+                    android:elevation="2dp"
+                    android:layout_margin="8dp"
+                    >
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#F4CBC4">
+
+                        <FrameLayout
+                            android:id="@+id/unlinkedYoutube"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            app:ico_color="#212121"
+                            app:ico_icon="faw-youtube"
+                            app:ico_size="32dp"
+                            android:layout_margin="8dp"/>
+
+                        <Button
+                            android:id="@+id/connectYoutube"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Connect"
+
+                            app:backgroundTint="#673ab7"
+
+                            app:cornerRadius="12dp"
+                            android:layout_gravity="bottom|center"
+                            android:layout_margin="12dp"
+                            />
+
+                    </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/linkedYoutube"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="gone"
+                            android:padding="8dp">
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_gravity="top">
+                                <io.github.florent37.shapeofview.shapes.CircleView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp">
+                                    <ImageView
+                                        android:id="@+id/imgViewYoutube"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"/>
+
+
+                                </io.github.florent37.shapeofview.shapes.CircleView>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="8dp"
+                                    android:textSize="12sp"
+                                    android:id="@+id/userNameYoutube"/>
+                            </LinearLayout>
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|start"
+                                android:textSize="48sp"
+                                android:id="@+id/amountYoutube"/>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_gravity="bottom"
+                                android:gravity="center|start">
+                                <ImageView
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:layout_gravity="center"
+                                    app:ico_color="#212121"
+                                    app:ico_icon="faw-youtube"
+                                    app:ico_size="16dp"/>
+                                <TextView
+                                    android:text="Youtube"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+
+
+
+                        </FrameLayout>
+                    </FrameLayout>
+
+                </io.github.florent37.shapeofview.shapes.RoundRectView>
+
+
+                <io.github.florent37.shapeofview.shapes.RoundRectView
+                    android:layout_width="148dp"
+                    android:layout_height="240dp"
+                    app:shape_roundRect_bottomLeftRadius="16dp"
+                    app:shape_roundRect_bottomRightRadius="16dp"
+                    app:shape_roundRect_topLeftRadius="16dp"
+                    app:shape_roundRect_topRightRadius="16dp"
+
+                    android:elevation="2dp"
+                    app:shape_roundRect_borderWidth="0dp"
+                    android:layout_margin="8dp"
+                    >
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#FBE5C8">
+
+                        <FrameLayout
+                            android:id="@+id/unlinkedInstagram"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <ImageView
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_gravity="center"
+                                app:ico_color="#212121"
+                                app:ico_icon="faw-instagram"
+                                app:ico_size="32dp"
+                                android:layout_margin="8dp"/>
+
+                            <Button
+                                android:id="@+id/connectInstagram"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Connect"
+
+                                app:backgroundTint="#3f51b5"
+
+                                app:cornerRadius="12dp"
+                                android:layout_gravity="bottom|center"
+                                android:layout_margin="12dp"
+                                />
+                        </FrameLayout>
+                        <FrameLayout
+                            android:id="@+id/linkedInstagram"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="gone"
+                            android:padding="8dp">
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_gravity="top">
+                                <io.github.florent37.shapeofview.shapes.CircleView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp">
+                                    <ImageView
+                                        android:id="@+id/imgViewInstagram"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"/>
+
+
+                                </io.github.florent37.shapeofview.shapes.CircleView>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="8dp"
+                                    android:textSize="12sp"
+                                    android:id="@+id/userNameInstagram"/>
+                            </LinearLayout>
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|start"
+                                android:textSize="48sp"
+                                android:id="@+id/amountInstagram"/>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_gravity="bottom"
+                                android:gravity="center|start">
+                                <ImageView
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:layout_gravity="center"
+                                    app:ico_color="#212121"
+                                    app:ico_icon="faw-instagram"
+                                    app:ico_size="16dp"/>
+                              <TextView
+                                    android:text="Instagram"
+                                  android:layout_marginStart="8dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+
+
+
+                        </FrameLayout>
+
+                    </FrameLayout>
+
+                </io.github.florent37.shapeofview.shapes.RoundRectView>
+                <io.github.florent37.shapeofview.shapes.RoundRectView
+                    android:layout_width="148dp"
+                    android:layout_height="240dp"
+                    app:shape_roundRect_bottomLeftRadius="16dp"
+                    app:shape_roundRect_bottomRightRadius="16dp"
+                    app:shape_roundRect_topLeftRadius="16dp"
+                    app:shape_roundRect_topRightRadius="16dp"
+
+                    app:shape_roundRect_borderWidth="0dp"
+                    android:layout_margin="8dp"
+                    >
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#B6E5D8">
+
+                    <FrameLayout
+                        android:id="@+id/unlinkedTwitter"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            app:ico_color="#212121"
+                            app:ico_icon="faw-twitter"
+                            app:ico_size="32dp"
+                            android:layout_margin="8dp"/>
+
+                        <Button
+                            android:id="@+id/connectTwitter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Connect"
+
+                            app:backgroundTint="#009688"
+
+                            app:cornerRadius="12dp"
+                            android:layout_gravity="bottom|center"
+                            android:layout_margin="12dp"
+                            />
+
+                    </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/linkedTwitter"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="gone"
+                            android:padding="8dp">
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_gravity="top">
+                                <io.github.florent37.shapeofview.shapes.CircleView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp">
+                                    <ImageView
+                                        android:id="@+id/imgViewTwitter"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"/>
+
+
+                                </io.github.florent37.shapeofview.shapes.CircleView>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="8dp"
+                                    android:textSize="12sp"
+                                    android:id="@+id/userNameTwitter"/>
+                            </LinearLayout>
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|start"
+                                android:textSize="48sp"
+                                android:id="@+id/amountTwitter"/>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_gravity="bottom"
+                                android:gravity="center|start">
+                                <ImageView
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:layout_gravity="center"
+                                    app:ico_color="#212121"
+                                    app:ico_icon="faw-twitter"
+                                    app:ico_size="16dp"/>
+                                <TextView
+                                    android:text="Twitter"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+
+
+
+                        </FrameLayout>
+                    </FrameLayout>
+
+                </io.github.florent37.shapeofview.shapes.RoundRectView>
+                <io.github.florent37.shapeofview.shapes.RoundRectView
+                    android:layout_width="148dp"
+                    android:layout_height="240dp"
+                    app:shape_roundRect_bottomLeftRadius="16dp"
+                    app:shape_roundRect_bottomRightRadius="16dp"
+                    app:shape_roundRect_topLeftRadius="16dp"
+                    app:shape_roundRect_topRightRadius="16dp"
+
+                    app:shape_roundRect_borderWidth="0dp"
+                    android:layout_margin="8dp"
+                    >
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#FFC2C7">
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/tiktokicon"
+                            android:layout_margin="8dp"/>
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Connect"
+
+                            app:backgroundTint="#ff5722"
+
+                            app:cornerRadius="12dp"
+                            android:layout_gravity="bottom|center"
+                            android:layout_margin="12dp"
+                            />
+                    </FrameLayout>
+
+                </io.github.florent37.shapeofview.shapes.RoundRectView>
+                <io.github.florent37.shapeofview.shapes.RoundRectView
+                    android:layout_width="148dp"
+                    android:layout_height="240dp"
+                    app:shape_roundRect_bottomLeftRadius="16dp"
+                    app:shape_roundRect_bottomRightRadius="16dp"
+                    app:shape_roundRect_topLeftRadius="16dp"
+                    app:shape_roundRect_topRightRadius="16dp"
+
+                    app:shape_roundRect_borderWidth="0dp"
+                    android:layout_margin="8dp"
+                    >
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#ECE3F0">
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            app:ico_color="#212121"
+                            app:ico_icon="faw-youtube"
+                            app:ico_size="32dp"
+                            android:layout_margin="8dp"/>
+                    </FrameLayout>
+
+                </io.github.florent37.shapeofview.shapes.RoundRectView>
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+    </LinearLayout>
+
+
+
+
+
+    <Button
+        android:id="@+id/withDrawButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Withdraw"
+        android:textSize="20sp"
+        app:cornerRadius="16dp"
+        android:padding="16dp"
+        app:backgroundTint="@color/black"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <Button
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Twitter"
+            android:layout_marginTop="8dp"
+        app:icon="@drawable/ic_add_card"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+        />
+
+        <Button
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Youtube"
+            android:layout_marginTop="8dp"
+            app:icon="@drawable/ic_add_card"
+            style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+            />
+
+        <Button
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tiktok"
+            android:layout_marginTop="8dp"
+            app:icon="@drawable/ic_add_card"
+            style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+            />
+
+
+        <Button
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Club House"
+            android:layout_marginTop="8dp"
+            app:icon="@drawable/ic_add_card"
+            style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+            />
+
+        <Button
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reddit"
+            android:layout_marginTop="8dp"
+            app:icon="@drawable/ic_add_card"
+            style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+            />
+
+        <Button
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Instagram"
+            android:layout_marginTop="8dp"
+            app:icon="@drawable/ic_add_card"
+            style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+            />
+
+        <Button
+
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Text button"
+            android:layout_marginTop="8dp"
+            app:icon="@drawable/ic_add_card"
+            style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+            />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Seey</string>
+    <string name="com.twitter.sdk.android.CONSUMER_KEY">phxe7uyhKxupO4uA5nV8aaVUy</string>
+    <string name="com.twitter.sdk.android.CONSUMER_SECRET">V66MRaq3CiCiw33jXVmAT6UZjEIJgEXmeuRFkrFgUX3UkptJHJ</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

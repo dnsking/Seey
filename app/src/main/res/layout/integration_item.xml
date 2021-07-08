@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="148dp"
+    android:layout_height="240dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <io.github.florent37.shapeofview.shapes.RoundRectView
+        android:layout_width="148dp"
+        android:layout_height="240dp"
+        app:shape_roundRect_bottomLeftRadius="16dp"
+        app:shape_roundRect_bottomRightRadius="16dp"
+        app:shape_roundRect_topLeftRadius="16dp"
+        app:shape_roundRect_topRightRadius="16dp"
+
+        app:shape_roundRect_borderWidth="0dp"
+        android:elevation="2dp"
+        android:layout_margin="8dp"
+        >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F4CBC4">
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                app:ico_color="#212121"
+                app:ico_icon="faw-youtube"
+                app:ico_size="32dp"
+                android:layout_margin="8dp"/>
+
+            <Button
+                android:id="@+id/connectYoutube"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Connect"
+
+                app:backgroundTint="#673ab7"
+
+                app:cornerRadius="12dp"
+                android:layout_gravity="bottom|center"
+                android:layout_margin="12dp"
+                />
+        </FrameLayout>
+
+    </io.github.florent37.shapeofview.shapes.RoundRectView>
+</FrameLayout>
